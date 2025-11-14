@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "mcp-server"
+version = "0.1.0"
+description = "Market-Data Collection & Publishing (MCP) server in Python"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.104.1"
+uvicorn = {extras = ["standard"], version = "^0.24.0"}
+ccxt = "^4.1.59"
+httpx = "^0.25.1"
+tenacity = "^8.2.3"
+aiocache = "^0.12.2"
+redis = "^5.0.1"
+pydantic = "^2.5.2"
+pydantic-settings = "^2.1.0"
+structlog = "^23.2.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
+pytest-asyncio = "^0.21.1"
+respx = "^0.20.2"
+ruff = "^0.1.6"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 88
+select = ["E", "W", "F", "I", "C", "B"]
+ignore = ["B008"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
