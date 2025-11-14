@@ -64,7 +64,7 @@ This project is a production-ready Market-Data Collection & Publishing (MCP) ser
 ### 2. Clone the Repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/AakashShah07/Market-Data-Collection-Publishing
 cd mcp-server
 ```
 
